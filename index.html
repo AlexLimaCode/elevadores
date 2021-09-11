@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="build/tailwind.css">
     <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./js/main.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -200,5 +198,16 @@
             </div>
         </div>
     </footer>
+
+    <script>
+		//Javascript to toggle the menu
+		document.getElementById('nav-toggle').onclick = function(){
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+
+        document.getElementById('menu-button').onclick = function(){
+			document.getElementById("ocultar").classList.toggle("hidden");
+		}
+	</script>
 </body>
 </html> 
