@@ -10,57 +10,112 @@
 </head>
 <body>
     <!-- Navbar -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 fixed">
-        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-            <div class="p-4 flex flex-row items-center justify-between">
-                <a href="../index.html" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Flowtrail UI</a>
-                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+    <!-- navbar goes here -->
+    <nav class="bg-gradient-to-br from-gray-50 to-gray-300 shadow-md">
+        <div class="px-3 mx-auto">
+            <div class="flex justify-between">
+                <!-- Recordar agrupar en contenedores las cosas que queremos que vayan del lado izquierdo y derecho -->
+                <!-- Lado izquierdo -->
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <a href="../index.html" class="flex items-center py-5 px-2 text-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1 text-black" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                        </svg>
+                        <span class="font-extrabold text-black">Fuji</span>
+                    </a>
+                    <!-- Nav lado izquierdo, si se desea -->
+                    <!-- <div class="hidden md:flex items-center space-x-1">
+                        <a class="py-5 px-3 text-gray-200 hover:text-black" href="#">Features</a>
+                        <a class="py-5 px-3 text-gray-200 hover:text-black" href="#">Pricing</a>
+                    </div> -->
+                </div>
+                <!-- Lado derecho -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="./nosotros.html" class="rounded p-2 text-black hover:bg-gray-300">Nosotros</a>
+                    <!-- Dropdown button -->
+                    <div class="flex flex-col overflow-visible float-right items-start">
+                        <button class="rounded p-2 dropBtn hover:bg-gray-300 transition duration-500" id="dropBtn">
+                            Productos
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dropBtn" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown -->
+                        <div class="text-sm bg-gradient-to-br from-gray-50 to-gray-300 hidden absolute mt-12 flex-col rounded min-w-max" id="dropdown">
+                            <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Elevadores</a>
+                            <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Escaleras eléctricas</a>
+                            <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Elevadores de autos</a>
+                            <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Elevadores para <br> discapacitados</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col overflow-visible float-right items-start">
+                        <button class="rounded p-2 dropBtn2 hover:bg-gray-300 transition duration-500" id="dropBtn2">
+                            Servicios
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dropBtn2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown -->
+                        <div class="text-sm bg-gradient-to-br from-gray-50 to-gray-300 hidden absolute mt-12 flex-col rounded min-w-max" id="dropdown2">
+                            <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Instalación</a>
+                            <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Mantenimiento</a>
+                            <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Modernización</a>
+                        </div>
+                    </div>
+                    <a href="./faq.html" class="py-2 px-3 text-black rounded hover:bg-gray-300 hover:text-black transition duration-500">FAQ</a>
+                    <a href="./contacto.html" class="py-2 px-3 text-black rounded hover:bg-gray-300 hover:text-black transition duration-500">Contacto</a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="mobile-menu hidden md:hidden p-1">
+            <a href="./nosotros.html" class="text-center
+            block rounded hover:bg-gray-300 py-2 px-2 text-black">Nosotros</a>
+            <!-- Dropdown button 1-->
+            <div class="text-center flex flex-col">
+                <button class="rounded p-2 m-1 dropBtnM hover:bg-gray-300" id="dropBtnM">
+                    Productos
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dropBtnM" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
                 </button>
+                <!-- Dropdown -->
+                <div class="bg-gray-200 hidden flex-col m-1 rounded text-sm" id="dropdownM">
+                    <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Elevadores</a>
+                    <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Escaleras eléctricas</a>
+                    <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Elevadores de autos</a>
+                    <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Elevadores para discapacitados</a>
+                </div>
             </div>
-            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-                <!-- Nosotros -->
-                <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./nosotros.html">Nosotros</a>
-                <!-- Productos -->
-                <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                    <span>Productos</span>
-                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
-                    <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./productos.html">Elevadores</a>
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./productos.html">Escaleras electricas</a>
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./productos.html">Elevadores de autos</a>
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./productos.html">Elevadores para discapacitados</a>
-                    </div>
-                    </div>
+            <!-- Dropdown button 2-->
+            <div class="text-center flex flex-col">
+                <button class="rounded p-2 m-1 dropBtnM2 hover:bg-gray-300" id="dropBtnM2">
+                    Servicios
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dropBtnM2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <!-- Dropdown -->
+                <div class="bg-gray-200 hidden flex-col m-1 rounded text-sm" id="dropdownM2">
+                    <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Instalación</a>
+                    <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Mantenimiento</a>
+                    <a href="../servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Modernización</a>
                 </div>
-                <!-- Servicios -->
-                <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                    <span>Servicios</span>
-                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
-                    <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./servicios.html">Instalación</a>
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./servicios.html">Mantenimiento</a>
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./servicios.html">Modernización</a>
-                    </div>
-                    </div>
-                </div>
-                <!-- FAQ -->
-                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./faq.html">FAQ</a>
-                <!-- Contacto -->
-                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./contacto.html">Contacto</a>   
-            </nav>
+            </div>
+            <a href="./faq.html" class="text-center block rounded hover:bg-gray-300 p-2 m-1 text-black">FAQ</a>
+            <a href="./contacto.html" class="text-center block rounded hover:bg-gray-300 p-2 mx-1 text-black">Contacto</a>
         </div>
-    </div>
+        <script src="../js/main.js"></script>
+    </nav>
     <!-- Fin de navbar -->
 </body>
 </html>
