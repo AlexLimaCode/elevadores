@@ -1,0 +1,26 @@
+{
+  "name": "elevadores",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000e\u0000l\u0000e\u0000v\u0000a\u0000d\u0000o\u0000r\u0000e\u0000s\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLimaCode/elevadores.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexLimaCode/elevadores/issues"
+  },
+  "homepage": "https://github.com/AlexLimaCode/elevadores#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.15",
+    "vite": "^2.5.6"
+  }
+}
