@@ -1,6 +1,6 @@
-.classPrueba{
-    color: black;
-}
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
 @tailwind base;
 @tailwind components;
