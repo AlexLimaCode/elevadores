@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/tailwind.css">
+</head>
+<body class="bg-gray-200">
+    <!-- navbar goes here -->
+    <nav class="bg-gradient-to-r from-purple-500 to-indigo-500">
+        <div class="px-3 mx-auto">
+            <div class="flex justify-between">
+                <!-- Recordar agrupar en contenedores las cosas que queremos que vayan del lado izquierdo y derecho -->
+                <!-- Lado izquierdo -->
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <a class="flex items-center py-5 px-2 text-gray-200" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1 text-black" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                        </svg>
+                        <span class="font-extrabold">Fuji</span>
+                    </a>
+                    <!-- Nav lado izquierdo, si se desea -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a class="py-5 px-3 text-gray-200 hover:text-black" href="#">Features</a>
+                        <a class="py-5 px-3 text-gray-200 hover:text-black" href="#">Pricing</a>
+                    </div>
+                </div>
+                <!-- Lado derecho -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a class="py-5 px-3 text-gray-200" href="">Nosotros</a>
+                    <!-- Dropdown button -->
+                    <div class="text-center flex flex-col overflow-visible float-right items-start">
+                        <button class="rounded bg-blue-500 p-2 dropBtn" id="dropBtn">
+                            Productos
+                        </button>
+                        <!-- Dropdown -->
+                        <div class="bg-gray-300 hidden absolute mt-12 flex-col rounded min-w-max" id="dropdown">
+                            <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Elevadores con carga</a>
+                            <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Escaleras vergas</a>
+                            <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 3</a>
+                        </div>
+                    </div>
+                    <a class="py-2 px-3 text-gray-200 rounded hover:bg-indigo-400 hover:text-black transition duration-500" href="">FAQ</a>
+                    <a class="py-2 px-3 text-gray-200 rounded hover:bg-indigo-400 hover:text-black transition duration-500" href="">Contacto</a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <a href="" class="block rounded hover:bg-indigo-400 py-2 px-2 text-gray-200">Nosotros</a>
+            <!-- Dropdown button 1-->
+            <div class="text-center flex flex-col">
+                <button class="rounded bg-blue-500 p-2 m-1 dropBtnM" id="dropBtnM">
+                    Productos
+                </button>
+                <!-- Dropdown -->
+                <div class="bg-gray-300 hidden flex-col m-1 rounded text-sm" id="dropdownM">
+                    <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 1</a>
+                    <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 2</a>
+                    <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 3</a>
+                </div>
+            </div>
+            <!-- Dropdown button 2-->
+            <div class="text-center flex flex-col">
+                <button class="rounded bg-blue-500 p-2 m-1 dropBtnM2" id="dropBtnM2">
+                    Servicios
+                </button>
+                <!-- Dropdown -->
+                <div class="bg-gray-300 hidden flex-col m-1 rounded text-sm" id="dropdownM2">
+                    <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 1</a>
+                    <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 2</a>
+                    <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 3</a>
+                </div>
+            </div>
+            <a href="" class="block rounded hover:bg-indigo-400 py-2 px-2 text-gray-200">FAQ</a>
+            <a href="" class="block rounded hover:bg-indigo-400 py-2 px-2 text-gray-200">Contacto</a>
+        </div>
+        <script src="./js/main.js"></script>
+    </nav>
+
+    <!-- content goes here -->
+    <div class="py-32 text-center">
+        <h2 class="font-extrabold text-4xl">Navbars in Tailwind!</h2>
+    </div>
+    <!-- Dropdown button -->
+    <div class="text-center flex flex-col">
+        <button class="rounded bg-blue-500 p-2 m-1" id="dropBtn">
+            Dropdown11
+        </button>
+        <!-- Dropdown -->
+        <div class="bg-gray-300 flex flex-col m-1 rounded text-sm" id="dropdown">
+            <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 1</a>
+            <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 2</a>
+            <a href="#" class="rounded px-2 py-1 hover:bg-gray-100">Dropdown 3</a>
+        </div>
+    </div>
+</body>
+</html>
