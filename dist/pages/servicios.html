@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    
+  <script type="module" crossorigin src="/assets/servicios.ee9c67ea.js"></script>
+    <link rel="modulepreload" href="/assets/tailwind.9592619e.js">
+    <link rel="modulepreload" href="/assets/mainjs.745bced7.js">
+    <link rel="stylesheet" href="/assets/tailwind.5ac3bbd1.css">
+  </head>
+<body>
+    <!-- Navbar -->
+    <!-- navbar goes here -->
+    <nav class="bg-gradient-to-br from-gray-50 to-gray-300 shadow-md">
+        <div class="px-3 mx-auto">
+            <div class="flex justify-between">
+                <!-- Recordar agrupar en contenedores las cosas que queremos que vayan del lado izquierdo y derecho -->
+                <!-- Lado izquierdo -->
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <a href="../index.html" class="flex items-center py-5 px-2 text-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1 text-black" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                        </svg>
+                        <span class="font-extrabold text-black">Fuji</span>
+                    </a>
+                    <!-- Nav lado izquierdo, si se desea -->
+                    <!-- <div class="hidden md:flex items-center space-x-1">
+                        <a class="py-5 px-3 text-gray-200 hover:text-black" href="#">Features</a>
+                        <a class="py-5 px-3 text-gray-200 hover:text-black" href="#">Pricing</a>
+                    </div> -->
+                </div>
+                <!-- Lado derecho -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="./nosotros.html" class="rounded p-2 text-black hover:bg-gray-300">Nosotros</a>
+                    <!-- Dropdown button -->
+                    <div class="flex flex-col overflow-visible float-right items-start">
+                        <button class="rounded p-2 dropBtn hover:bg-gray-300 transition duration-500" id="dropBtn">
+                            Productos
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dropBtn" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown -->
+                        <div class="text-sm bg-gradient-to-br from-gray-50 to-gray-300 hidden absolute mt-12 flex-col rounded min-w-max" id="dropdown">
+                            <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Elevadores</a>
+                            <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Escaleras eléctricas</a>
+                            <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Pasillos Electricos</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col overflow-visible float-right items-start">
+                        <button class="rounded p-2 dropBtn2 hover:bg-gray-300 transition duration-500" id="dropBtn2">
+                            Servicios
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dropBtn2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown -->
+                        <div class="text-sm bg-gradient-to-br from-gray-50 to-gray-300 hidden absolute mt-12 flex-col rounded min-w-max" id="dropdown2">
+                            <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Instalación</a>
+                            <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Mantenimiento</a>
+                            <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Modernización</a>
+                        </div>
+                    </div>
+                    
+                    <a href="../index.html#contacto" class="py-2 px-3 text-black rounded hover:bg-gray-300 hover:text-black transition duration-500">Contacto</a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="mobile-menu hidden md:hidden p-1">
+            <a href="./nosotros.html" class="text-center
+            block rounded hover:bg-gray-300 py-2 px-2 text-black">Nosotros</a>
+            <!-- Dropdown button 1-->
+            <div class="text-center flex flex-col">
+                <button class="rounded p-2 m-1 dropBtnM hover:bg-gray-300" id="dropBtnM">
+                    Productos
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dropBtnM" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <!-- Dropdown -->
+                <div class="bg-gray-200 hidden flex-col m-1 rounded text-sm" id="dropdownM">
+                    <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Elevadores</a>
+                    <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Escaleras eléctricas</a>
+                    <a href="./productos.html" class="rounded px-2 py-1 hover:bg-gray-300">Pasillos Electricos</a>
+                </div>
+            </div>
+            <!-- Dropdown button 2-->
+            <div class="text-center flex flex-col">
+                <button class="rounded p-2 m-1 dropBtnM2 hover:bg-gray-300" id="dropBtnM2">
+                    Servicios
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dropBtnM2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <!-- Dropdown -->
+                <div class="bg-gray-200 hidden flex-col m-1 rounded text-sm" id="dropdownM2">
+                    <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Instalación</a>
+                    <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Mantenimiento</a>
+                    <a href="./servicios.html" class="rounded px-2 py-1 hover:bg-gray-300">Modernización</a>
+                </div>
+            </div>
+            <a href="../index.html#contacto" class="text-center block rounded hover:bg-gray-300 p-2 mx-1 text-black">Contacto</a>
+        </div>
+    </nav>
+    <!-- Fin de navbar -->
+
+    <div class="bg-white">
+        <div class="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
+            <div>
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Instalaciones</h2>
+               
+                <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Personal</dt>
+                        <dd class="mt-2 text-sm text-gray-500">FUJI Yida.</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Equipos a instalar</dt>
+                        <dd class="mt-2 text-sm text-gray-500">
+                            <ul class="list-disc list-outside md:list-inside">
+                                <li>Elevadores (todo tipo)</li>
+                                <li>Escaleras Electricas</li>
+                                <li>Pasillos Electricos</li>
+                            </ul>
+                        </dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Dimensiones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Realizamos la instalación acorde a sus necesidades</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Tiempo de Instalación</dt>
+                        <dd class="mt-2 text-sm text-gray-500">El tiempo de instalación va acorde a la dificultad de la misma y el llegado de materiales para realizarlo</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Especificaciones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Para la realización de instalación, se requiere que el cliente proporcione la información de acuerdo al equipo a instalar.</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Consideraciones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Dentro del presupuesto de instalación, se cobra la adaptación de los materiales junto con el cobro de los mismos dependiendo la necesidad y complejidad de la misma</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+                <img src="/assets/instalacion4.281e77e8.jpeg" alt="Walnut card tray with white powder coated steel divider and 3 punchout holes." class="bg-gray-100 rounded-lg">
+                <img src="/assets/instalacion3.e5cfe74b.jpeg" alt="Top down view of walnut card tray with embedded magnets and card groove." class="bg-gray-100 rounded-lg">
+                <img src="/assets/instalacion2.1d36a24c.jpeg" alt="Side of walnut card tray with card groove and recessed card area." class="bg-gray-100 rounded-lg">
+                <img src="/assets/instalacion1.279b5d1d.jpeg" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="bg-gray-100 rounded-lg">
+            </div>
+        </div>
+    </div>
+    <div class="bg-white">
+        <div class="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
+            <div>
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Mantenimiento</h2>
+               
+                <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Personal</dt>
+                        <dd class="mt-2 text-sm text-gray-500">FUJI Yida.</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Equipos para mantenimiento</dt>
+                        <dd class="mt-2 text-sm text-gray-500">
+                            <ul class="list-disc list-outside md:list-inside">
+                                <li>Elevadores (todo tipo)</li>
+                                <li>Escaleras Electricas</li>
+                                <li>Pasillos Electricos</li>
+                            </ul>
+                        </dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Dimensiones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Realizamos el mantenimiento a cualquier equipo</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Tiempo de Mantenimiento</dt>
+                        <dd class="mt-2 text-sm text-gray-500">El tiempo de mantenimiento va acorde a la dificultad del mismo y el llegado de materiales para realizarlo</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Especificaciones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Para dar mantenimiento, se requiere que el cliente proporcione la información de acuerdo al equipo a dar mantenimiento</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Consideraciones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Dentro del presupuesto de mantenimiento, se cobra la adaptación de los materiales junto con el cobro de los mismos dependiendo la necesidad y complejidad de este</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+                <img src="/assets/mantenimiento1.fad6af79.jpeg" alt="Walnut card tray with white powder coated steel divider and 3 punchout holes." class="bg-gray-100 rounded-lg">
+                <img src="/assets/mantenimiento2.033c9ae9.jpeg" alt="Top down view of walnut card tray with embedded magnets and card groove." class="bg-gray-100 rounded-lg">
+                <img src="/assets/mantenimiento3.7c2c534f.jpeg" alt="Side of walnut card tray with card groove and recessed card area." class="bg-gray-100 rounded-lg">
+                <!-- <img src="../images/mantenimiento1.jpeg" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="bg-gray-100 rounded-lg"> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <div class="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
+            <div>
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Modernizacion</h2>
+               
+                <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Personal</dt>
+                        <dd class="mt-2 text-sm text-gray-500">FUJI Yida.</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Equipos que se modernizan</dt>
+                        <dd class="mt-2 text-sm text-gray-500">
+                            <ul class="list-disc list-outside md:list-inside">
+                                <li>Elevadores (todo tipo)</li>
+                                <li>Escaleras Electricas</li>
+                                <li>Pasillos Electricos</li>
+                            </ul>
+                        </dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Dimensiones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Realizamos la modernizacion acorde a sus necesidades</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Tiempo de Modernización</dt>
+                        <dd class="mt-2 text-sm text-gray-500">El tiempo de modernizacion va acorde a la dificultad de la misma y el llegado de materiales para realizarlo</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Especificaciones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Para la realización de modernizacion, se requiere que el cliente proporcione la información de acuerdo al equipo a modernizar, utilizamos tu equipo y modernizamos el tablero, botoneras y sensores</dd>
+                    </div>
+            
+                    <div class="border-t border-gray-200 pt-4">
+                        <dt class="font-medium text-gray-900">Consideraciones</dt>
+                        <dd class="mt-2 text-sm text-gray-500">Dentro del presupuesto de modernizacion, se cobra la adaptación de los materiales junto con el cobro de los mismos dependiendo la necesidad y complejidad de lo mismo</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+                <img src="/assets/modernizacion1.168e8c48.jpeg" alt="Walnut card tray with white powder coated steel divider and 3 punchout holes." class="bg-gray-100 rounded-lg">
+                <img src="/assets/modernizacion2.b77db17d.jpeg" alt="Top down view of walnut card tray with embedded magnets and card groove." class="bg-gray-100 rounded-lg">
+                <img src="/assets/modernizacion3.e77422dd.jpeg" alt="Side of walnut card tray with card groove and recessed card area." class="bg-gray-100 rounded-lg">
+                <!-- <img src="../images/modernizacion4.jpeg" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="bg-gray-100 rounded-lg"> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg-gray-400 p-5 flex flex-col items-center md:flex-row md:justify-between md:items-start">
+            <div>
+                <a href="../index.html" class="flex text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1 text-black" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                    </svg>
+                    <span class="font-extrabold text-black">Fuji</span>
+                </a>
+            </div>
+            <div class="pt-3 md:pt-0">
+                <a href="./nosotros.html" class="hover:text-gray-100 transition duration-300">Nosotros</a>
+            </div>
+            <div class="flex flex-col items-center pt-3 md:items-start md:pt-0">
+                <a href="./productos.html" class="hover:text-gray-100 transition duration-300">Productos</a>
+                <a href="./productos.html" class="text-gray-300 hover:text-gray-100 transition duration-300">Elevadores</a>
+                <a href="./productos.html" class="text-gray-300 hover:text-gray-100 transition duration-300">Escaleras eléctricas</a>
+                <a href="./productos.html" class="text-gray-300 hover:text-gray-100 transition duration-300">Pasillos Electricos</a>
+            </div>
+            <div class="flex flex-col items-center pt-3 md:items-start md:pt-0">
+                <a href="./servicios.html" class="hover:text-gray-100 transition duration-300">Servicios</a>
+                <a href="./servicios.html" class="text-gray-300 hover:text-gray-100 transition duration-300">Instalación</a>
+                <a href="./servicios.html" class="text-gray-300 hover:text-gray-100 transition duration-300">Mantenimiento</a>
+                <a href="./servicios.html" class="text-gray-300 hover:text-gray-100 transition duration-300">Modernización</a>
+            </div>
+            <div class="pt-3 md:pt-0">
+                <a href="../index.html#contacto" class="hover:text-gray-100 transition duration-300">Contacto</a>
+            </div>
+        </div>
+        <div class="bg-gray-200 h-12 flex flex-row justify-between items-center p-5">
+            <div class="divide-x divide-black flex">
+                <a href="../index.html" class="flex pr-3 text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                    </svg>
+                </a>
+                <h1 class="text-gray-300 pl-3 font-bold">Fuji 2021.Copyright.</h1>
+            </div>
+            <div class="flex">
+                <svg class="text-black h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M18.258,3.266c-0.693,0.405-1.46,0.698-2.277,0.857c-0.653-0.686-1.586-1.115-2.618-1.115c-1.98,0-3.586,1.581-3.586,3.53c0,0.276,0.031,0.545,0.092,0.805C6.888,7.195,4.245,5.79,2.476,3.654C2.167,4.176,1.99,4.781,1.99,5.429c0,1.224,0.633,2.305,1.596,2.938C2.999,8.349,2.445,8.19,1.961,7.925C1.96,7.94,1.96,7.954,1.96,7.97c0,1.71,1.237,3.138,2.877,3.462c-0.301,0.08-0.617,0.123-0.945,0.123c-0.23,0-0.456-0.021-0.674-0.062c0.456,1.402,1.781,2.422,3.35,2.451c-1.228,0.947-2.773,1.512-4.454,1.512c-0.291,0-0.575-0.016-0.855-0.049c1.588,1,3.473,1.586,5.498,1.586c6.598,0,10.205-5.379,10.205-10.045c0-0.153-0.003-0.305-0.01-0.456c0.7-0.499,1.308-1.12,1.789-1.827c-0.644,0.28-1.334,0.469-2.06,0.555C17.422,4.782,17.99,4.091,18.258,3.266"></path>
+                </svg>
+                <svg class="text-black h-6 w-6" viewBox="0 0 20 20" fill="currentColor" >
+                    <path d="M11.344,5.71c0-0.73,0.074-1.122,1.199-1.122h1.502V1.871h-2.404c-2.886,0-3.903,1.36-3.903,3.646v1.765h-1.8V10h1.8v8.128h3.601V10h2.403l0.32-2.718h-2.724L11.344,5.71z"></path>
+                </svg>
+                <svg class="text-black h-6 w-6" viewBox="0 0 20 20" fill="currentColor" >
+                    <path d="M14.52,2.469H5.482c-1.664,0-3.013,1.349-3.013,3.013v9.038c0,1.662,1.349,3.012,3.013,3.012h9.038c1.662,0,3.012-1.35,3.012-3.012V5.482C17.531,3.818,16.182,2.469,14.52,2.469 M13.012,4.729h2.26v2.259h-2.26V4.729z M10,6.988c1.664,0,3.012,1.349,3.012,3.012c0,1.664-1.348,3.013-3.012,3.013c-1.664,0-3.012-1.349-3.012-3.013C6.988,8.336,8.336,6.988,10,6.988 M16.025,14.52c0,0.831-0.676,1.506-1.506,1.506H5.482c-0.831,0-1.507-0.675-1.507-1.506V9.247h1.583C5.516,9.494,5.482,9.743,5.482,10c0,2.497,2.023,4.52,4.518,4.52c2.494,0,4.52-2.022,4.52-4.52c0-0.257-0.035-0.506-0.076-0.753h1.582V14.52z"></path>
+                </svg>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin Footer -->
+    <!-- Script tag hasta el final -->
+    
+</body>
+</html>
